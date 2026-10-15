@@ -1,11 +1,76 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Crear Cuenta</title>
-</head>
-<body>
-    
-</body>
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Crear cuenta — Mundo Cartas</title>
+    <link rel="stylesheet" href="../css/estilos.css" />
+    <link rel="stylesheet" href="../css/usuarios.css" />
+  </head>
+  <body>
+    <header class="cabecera">
+      <a class="marca" href="calendario.html">Mundo Cartas</a>
+      <nav aria-label="Principal">
+        <a href="calendario.html">Torneos</a
+        ><a href="iniciar-sesion.html">Iniciar sesión</a
+        ><a href="crear-cuenta.html" aria-current="page">Crear cuenta</a>
+      </nav>
+    </header>
+    <main>
+      <form class="tarjeta auth" action="iniciar-sesion.html" method="get">
+        <h1>Crear cuenta</h1>
+        <p>Inscríbete en torneos y revisa tu ranking e historial.</p>
+        <div class="campo">
+          <label for="nombre">Nombre completo</label
+          ><input
+            id="nombre"
+            name="nombre"
+            required
+            minlength="5"
+            autocomplete="name"
+          />
+        </div>
+        <div class="campo">
+          <label for="rut">RUT</label
+          ><input
+            id="rut"
+            name="rut"
+            required
+            pattern="[0-9]{1,2}\.?[0-9]{3}\.?[0-9]{3}-[0-9kK]"
+            placeholder="12.345.678-9"
+            title="Formato: 12.345.678-9"
+          />
+        </div>
+        <div class="campo">
+          <label for="correo">Correo electrónico</label
+          ><input
+            id="correo"
+            name="correo"
+            type="email"
+            required
+            autocomplete="email"
+          />
+        </div>
+        <div class="campo">
+          <label for="clave">Contraseña</label
+          ><input
+            id="clave"
+            name="clave"
+            type="password"
+            required
+            minlength="8"
+            autocomplete="new-password"
+          /><small>Mínimo 8 caracteres.</small>
+        </div>
+        <label class="check"
+          ><input type="checkbox" required /> Autorizo el uso de mis datos solo
+          para gestionar torneos y contactarme.</label
+        >
+        <button class="boton" type="submit">Crear cuenta</button>
+        <p class="pie">
+          ¿Ya tienes cuenta? <a href="iniciar-sesion.html">Inicia sesión</a>
+        </p>
+      </form>
+    </main>
+  </body>
 </html>

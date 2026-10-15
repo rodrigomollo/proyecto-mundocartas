@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Mundo Cartas - Editar Torneo</title>
+<link rel="stylesheet" href="../css/estilos.css">
+</head>
+<body>
+
+  <header class="app-header">
+    <h1>Mundo Cartas</h1>
+    <nav>
+      <a href="torneos-admin.html">Torneos</a>
+    </nav>
+  </header>
+
+  <main class="contenedor">
+    <h2>Editar torneo</h2>
+
+    <form id="form-editar-torneo" action="torneos-admin.html" method="get">
+
+      <div class="campo">
+        <label for="nombre">Nombre del torneo</label>
+        <input type="text" id="nombre" name="nombre" pattern=".*\S.*" required>
+        <span class="error" id="error-nombre">Debes ingresar un nombre para el torneo.</span>
+      </div>
+
+      <div class="campo">
+        <label for="juego">Juego</label>
+        <select id="juego" name="juego" required>
+          <option value="">Selecciona un juego</option>
+          <option value="pokemon">Pokémon</option>
+          <option value="one-piece">One Piece</option>
+          <option value="yugioh">Yu-Gi-Oh!</option>
+          <option value="magic">Magic</option>
+          <option value="digimon">Digimon</option>
+          <option value="gundam">Gundam</option>
+          <option value="riftbound">Riftbound</option>
+          <option value="warhammer">Warhammer</option>
+          <option value="mitos-primer-bloque">Mitos y Leyendas (Primer Bloque)</option>
+          <option value="mitos-imperio">Mitos y Leyendas (Imperio)</option>
+        </select>
+        <span class="error" id="error-juego">Debes seleccionar un juego.</span>
+      </div>
+
+      <div class="campo-grupo">
+        <div class="campo">
+          <label for="fecha">Fecha</label>
+          <input type="date" id="fecha" name="fecha" required>
+          <span class="error" id="error-fecha">Debes ingresar una fecha.</span>
+        </div>
+
+        <div class="campo">
+          <label for="hora">Hora</label>
+          <input type="time" id="hora" name="hora" required>
+          <span class="error" id="error-hora">Debes ingresar una hora.</span>
+        </div>
+      </div>
+
+      <div class="campo">
+        <label for="valor">Valor de inscripción (CLP)</label>
+        <input type="number" id="valor" name="valor" min="0" step="500" required>
+        <span class="error" id="error-valor">Ingresa un valor válido (0 o más).</span>
+      </div>
+
+      <div class="campo">
+        <label for="cupo">Cupo máximo de participantes</label>
+        <input type="number" id="cupo" name="cupo" min="2" step="1" required>
+        <span class="error" id="error-cupo">Ingresa un cupo máximo válido (mínimo 2 jugadores).</span>
+      </div>
+
+      <div class="campo">
+        <label for="reglas">Reglas y detalles del torneo</label>
+        <textarea id="reglas" name="reglas" rows="5" required></textarea>
+        <span class="error" id="error-reglas">Debes ingresar las reglas y detalles del torneo.</span>
+      </div>
+
+      <div class="acciones-form">
+        <button type="button" class="btn btn-primario" popovertarget="confirmar-guardado">Guardar cambios</button>
+        <a href="torneos-admin.html" class="btn btn-secundario">Cancelar</a>
+      </div>
+
+      <div id="confirmar-guardado" class="confirmacion" popover>
+        <p>¿Estás seguro de guardar los cambios en este torneo?</p>
+        <div class="acciones-form">
+          <button type="submit" class="btn btn-primario">Sí, guardar</button>
+          <button type="button" class="btn btn-secundario" popovertarget="confirmar-guardado" popovertargetaction="hide">Volver</button>
+        </div>
+      </div>
+
+    </form>
+  </main>
+
+</body>
+</html>

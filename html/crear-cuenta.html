@@ -8,21 +8,21 @@
     <link rel="stylesheet" href="../css/usuarios.css" />
   </head>
   <body>
-    <header class="cabecera">
-      <a class="marca" href="calendario.html">Mundo Cartas</a>
-      <nav aria-label="Principal">
-        <a href="calendario.html">Torneos</a
-        ><a href="iniciar-sesion.html">Iniciar sesión</a
-        ><a href="crear-cuenta.html" aria-current="page">Crear cuenta</a>
+    <header class="app-header">
+      <h1>Mundo Cartas</h1>
+      <nav>
+        <a href="calendario.html">Torneos</a>
+        <a href="iniciar-sesion.html">Iniciar sesión</a>
+        <a href="crear-cuenta.html" aria-current="page">Crear cuenta</a>
       </nav>
     </header>
-    <main>
-      <form class="tarjeta auth" action="iniciar-sesion.html" method="get">
-        <h1>Crear cuenta</h1>
-        <p>Inscríbete en torneos y revisa tu ranking e historial.</p>
+    <main class="contenedor auth">
+      <h2>Crear Cuenta</h2>
+      <p>Inscríbete en torneos y revisa tu ranking e historial</p>
+      <form action="iniciar-sesion.html" method="get">
         <div class="campo">
-          <label for="nombre">Nombre completo</label
-          ><input
+          <label for="nombre">Nombre completo</label>
+          <input
             id="nombre"
             name="nombre"
             required
@@ -31,8 +31,8 @@
           />
         </div>
         <div class="campo">
-          <label for="rut">RUT</label
-          ><input
+          <label for="rut">RUT</label>
+          <input
             id="rut"
             name="rut"
             required
@@ -66,7 +66,7 @@
           ><input type="checkbox" required /> Autorizo el uso de mis datos solo
           para gestionar torneos y contactarme.</label
         >
-        <button class="boton" type="submit">Crear cuenta</button>
+        <button class="btn btn-primario" type="submit">Crear cuenta</button>
         <p class="pie">
           ¿Ya tienes cuenta? <a href="iniciar-sesion.html">Inicia sesión</a>
         </p>

@@ -8,18 +8,18 @@
     <link rel="stylesheet" href="../css/usuarios.css" />
   </head>
   <body>
-    <header class="cabecera">
-      <a class="marca" href="calendario.html">Mundo Cartas</a>
-      <nav aria-label="Principal">
-        <a href="calendario.html">Torneos</a
-        ><a href="iniciar-sesion.html" aria-current="page">Iniciar sesión</a
-        ><a href="crear-cuenta.html">Crear cuenta</a>
+    <header class="app-header">
+      <h1>Mundo Cartas</h1>
+      <nav>
+        <a href="calendario.html">Torneos</a>
+        <a href="iniciar-sesion.html" aria-current="page">Iniciar sesión</a>
+        <a href="crear-cuenta.html">Crear cuenta</a>
       </nav>
     </header>
-    <main>
-      <form class="tarjeta auth" action="calendario.html" method="get">
-        <h1>Iniciar sesión</h1>
-        <p>Entra para inscribirte y ver tu historial.</p>
+    <main class="contenedor auth">
+      <h2>Iniciar sesión</h2>
+      <p>Entra para inscribirte y ver tu historial.</p>
+      <form action="calendario.html" method="get">
         <div class="campo">
           <label for="correo">Correo electrónico</label
           ><input
@@ -40,7 +40,7 @@
             autocomplete="current-password"
           />
         </div>
-        <button class="boton" type="submit">Ingresar</button>
+        <button class="btn btn-primario" type="submit">Ingresar</button>
         <p class="pie">
           ¿Aún no tienes cuenta? <a href="crear-cuenta.html">Crea una</a>
         </p>

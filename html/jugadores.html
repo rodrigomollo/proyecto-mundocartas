@@ -8,27 +8,27 @@
     <link rel="stylesheet" href="../css/usuarios.css" />
   </head>
   <body>
-    <header class="cabecera">
-      <a class="marca" href="calendario.html">Mundo Cartas</a>
-      <nav aria-label="Administración">
-        <a href="torneos-admin.html">Torneos</a
-        ><a href="jugadores.html" aria-current="page">Jugadores</a
-        ><a href="iniciar-sesión.html">Cerrar sesión</a>
+    <header class="app-header">
+    <h1>Mundo Cartas</h1>
+      <nav>
+        <a href="torneos-admin.html">Torneos</a>
+        <a href="jugadores.html" aria-current="page">Jugadores</a>
+        <a href="iniciar-sesion.html">Cerrar sesión</a>
       </nav>
     </header>
-    <main>
-      <h1>Jugadores</h1>
+    <main class="pagina">
+      <h2>Jugadores</h2>
       <p>
         Registra jugadores presenciales y mantén sus datos de contacto al día.
       </p>
       <div class="grid-usuarios">
         <form class="tarjeta" action="jugadores.html" method="get">
-          <h2>Registrar jugador</h2>
+          <h3>Registrar jugador</h3>
           <fieldset class="grupo">
             <legend>Datos personales</legend>
             <div class="campo">
-              <label for="nombre">Nombre completo</label
-              ><input
+              <label for="nombre">Nombre completo</label>
+              <input
                 id="nombre"
                 name="nombre"
                 required
@@ -37,8 +37,8 @@
               />
             </div>
             <div class="campo">
-              <label for="rut">RUT</label
-              ><input
+              <label for="rut">RUT</label>
+              <input
                 id="rut"
                 name="rut"
                 required
@@ -48,21 +48,23 @@
               />
             </div>
             <div class="campo">
-              <label for="tel">Teléfono</label
-              ><input
+              <label for="tel">Teléfono</label>
+              <input
                 id="tel"
                 name="tel"
                 type="tel"
                 required
                 pattern="[0-9+ ]{8,14}"
                 placeholder="+56 9 1234 5678"
-              /><small
+              />
+              <small
                 >Lo usamos para avisarte si olvidas algo en el local.</small
               >
             </div>
             <div class="campo">
-              <label for="nac">Fecha de nacimiento</label
-              ><input id="nac" name="nac" type="date" /><small
+              <label for="nac">Fecha de nacimiento</label>
+              <input id="nac" name="nac" type="date" />
+              <small
                 >Opcional. Pokémon la usa para separar Junior, Senior y
                 Master.</small
               >
@@ -71,59 +73,57 @@
           <fieldset class="grupo">
             <legend>Identificadores por juego (opcional)</legend>
             <div class="campo">
-              <label for="id-pk">Pokémon</label
-              ><input id="id-pk" name="id-pk" />
+              <label for="id-pk">Pokémon</label>
+              <input id="id-pk" name="id-pk" />
             </div>
             <div class="campo">
-              <label for="id-yg">Yu-Gi-Oh!</label
-              ><input id="id-yg" name="id-yg" />
+              <label for="id-yg">Yu-Gi-Oh!</label>
+              <input id="id-yg" name="id-yg" />
             </div>
             <div class="campo">
-              <label for="id-mt">Mitos y Leyendas (código TOR)</label
-              ><input id="id-mt" name="id-mt" placeholder="CL123456" />
+              <label for="id-mt">Mitos y Leyendas (código TOR)</label>
+              <input id="id-mt" name="id-mt" placeholder="CL123456" />
             </div>
           </fieldset>
-          <label class="check"
-            ><input type="checkbox" required /> El jugador autoriza el uso de
-            sus datos solo para gestionar torneos y contactarlo.</label
+          <label class="check">
+            <input type="checkbox" required /> El jugador autoriza el uso de sus
+            datos solo para gestionar torneos y contactarlo.</label
           >
-          <button class="boton" type="submit">Guardar jugador</button>
-
-          <section class="tarjeta">
-            <h2>Jugadores registrados</h2>
-            <div class="tabla-wrap">
-              <table>
-                <thead>
-                  <tr>
-                    <th>Jugador</th>
-                    <th>Contacto</th>
-                    <th>Juegos</th>
-                    <th></th>
-                  </tr>
-                </thead>
-                <tbody>
-                  <tr>
-                    <td>Rodrigo Pollo<small>22.325.130-7</small></td>
-                    <td>+56 9 2619 8058</td>
-                    <td><span class="etiqueta">Pokémon</span></td>
-                  </tr>
-                  <tr>
-                    <td>Adán Toro<small>12.493.539-2</small></td>
-                    <td>+56 9 7293 9248</td>
-                    <td><span class="etiqueta">Yu-Gi-Oh!</span></td>
-                  </tr>
-                  <tr>
-                    <td>Diego Apolinario<small>24.283.834-K</small></td>
-                    <td>+56 9 7493 0148</td>
-                    <td><span class="etiqueta">Mitos y Leyendas</span></td>
-                  </tr>
-                </tbody>
-              </table>
-            </div>
-            <p><small>Datos de ejemplo.</small></p>
-          </section>
-
+          <button class="btn btn-primario" type="submit">Guardar jugador</button>
         </form>
+        <section class="tarjeta">
+          <h3>Jugadores registrados</h3>
+          <div class="tabla-wrap">
+            <table>
+              <thead>
+                <tr>
+                  <th>Jugador</th>
+                  <th>Contacto</th>
+                  <th>Juegos</th>
+                  <th></th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>Rodrigo Pollo<small>22.325.130-7</small></td>
+                  <td>+56 9 2619 8058</td>
+                  <td><span class="etiqueta">Pokémon</span></td>
+                </tr>
+                <tr>
+                  <td>Adán Toro<small>12.493.539-2</small></td>
+                  <td>+56 9 7293 9248</td>
+                  <td><span class="etiqueta">Yu-Gi-Oh!</span></td>
+                </tr>
+                <tr>
+                  <td>Diego Apolinario<small>24.283.834-K</small></td>
+                  <td>+56 9 7493 0148</td>
+                  <td><span class="etiqueta">Mitos y Leyendas</span></td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          <p><small>Datos de ejemplo.</small></p>
+        </section>
       </div>
     </main>
   </body>

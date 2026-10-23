@@ -8,22 +8,22 @@
     <link rel="stylesheet" href="../css/usuarios.css" />
   </head>
   <body>
-    <header class="cabecera">
-      <a class="marca" href="calendario.html">Mundo Cartas</a>
-      <nav aria-label="Administración">
+    <header class="app-header">
+    <h1>Mundo Cartas</h1>
+      <nav>
         <a href="torneos-admin.html">Torneos</a>
         <a href="jugadores.html" aria-current="page">Jugadores</a>
-        <a href="iniciar-sesión.html">Cerrar sesión</a>
+        <a href="iniciar-sesion.html">Cerrar sesión</a>
       </nav>
     </header>
-    <main>
-      <h1>Jugadores</h1>
+    <main class="pagina">
+      <h2>Jugadores</h2>
       <p>
         Registra jugadores presenciales y mantén sus datos de contacto al día.
       </p>
       <div class="grid-usuarios">
         <form class="tarjeta" action="jugadores.html" method="get">
-          <h2>Registrar jugador</h2>
+          <h3>Registrar jugador</h3>
           <fieldset class="grupo">
             <legend>Datos personales</legend>
             <div class="campo">
@@ -89,10 +89,10 @@
             <input type="checkbox" required /> El jugador autoriza el uso de sus
             datos solo para gestionar torneos y contactarlo.</label
           >
-          <button class="boton" type="submit">Guardar jugador</button>
+          <button class="btn btn-primario" type="submit">Guardar jugador</button>
         </form>
         <section class="tarjeta">
-          <h2>Jugadores registrados</h2>
+          <h3>Jugadores registrados</h3>
           <div class="tabla-wrap">
             <table>
               <thead>

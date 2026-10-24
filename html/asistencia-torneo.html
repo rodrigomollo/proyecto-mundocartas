@@ -19,7 +19,11 @@
     </header>
     <main class="pagina">
       <h2>Asistencia al torneo</h2>
-      <p>Torneo: Pokémon TCG — 25-10-2026. Jugadores inscritos en el torneo.</p>
+      <p>
+        Torneo: Pokémon TCG — 25-10-2026. Marca la asistencia de cada jugador:
+        los que asisten pasan de <strong>inscrito</strong> a
+        <strong>participante</strong>.
+      </p>
       <section class="tarjeta">
         <h3>Inscritos</h3>
         <form action="asistencia-torneo.html" method="get">
@@ -30,6 +34,7 @@
                   <th>Jugador</th>
                   <th>Contacto</th>
                   <th>Asistió</th>
+                  <th>Condición</th>
                 </tr>
               </thead>
               <tbody>
@@ -41,8 +46,10 @@
                       type="checkbox"
                       name="asistio-1"
                       aria-label="Asistió Rodrigo Pollo"
+                      checked
                     />
                   </td>
+                  <td><span class="condicion participante">Participante</span></td>
                 </tr>
                 <tr>
                   <td>Adán Toro<small>12.493.539-2</small></td>
@@ -54,6 +61,7 @@
                       aria-label="Asistió Adán Toro"
                     />
                   </td>
+                  <td><span class="condicion inscrito">Inscrito</span></td>
                 </tr>
                 <tr>
                   <td>Diego Apolinario<small>24.283.834-K</small></td>
@@ -63,8 +71,10 @@
                       type="checkbox"
                       name="asistio-3"
                       aria-label="Asistió Diego Apolinario"
+                      checked
                     />
                   </td>
+                  <td><span class="condicion participante">Participante</span></td>
                 </tr>
               </tbody>
             </table>

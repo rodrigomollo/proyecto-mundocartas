@@ -20,7 +20,7 @@
       <h2>Pagos del torneo</h2>
       <p>
         Torneo: Pokémon TCG — 25-10-2026 — Valor de inscripción: $5.000.
-        Revisa el estado de pago de cada inscrito.
+        Registra los pagos presenciales y revisa el estado de cada inscrito.
       </p>
       <section class="tarjeta">
         <form class="consulta-pago" action="pagos-torneo.html" method="get">
@@ -35,6 +35,7 @@
           </div>
           <button class="btn btn-secundario" type="submit">Consultar</button>
         </form>
+
         <h3>Inscritos</h3>
         <div class="tabla-wrap">
           <table>
@@ -43,6 +44,7 @@
                 <th>Jugador</th>
                 <th>Estado de pago</th>
                 <th>Fecha de pago</th>
+                <th></th>
               </tr>
             </thead>
             <tbody>
@@ -50,16 +52,79 @@
                 <td>Rodrigo Pollo<small>22.325.130-7</small></td>
                 <td><span class="estado-pago pendiente">Pendiente</span></td>
                 <td>—</td>
+                <td>
+                  <button
+                    type="button"
+                    class="btn btn-primario"
+                    popovertarget="pago-1"
+                  >
+                    Registrar pago
+                  </button>
+                  <div id="pago-1" class="confirmacion" popover>
+                    <form action="pagos-torneo.html" method="get">
+                      <p>¿Registrar el pago presencial de Rodrigo Pollo ($5.000)?</p>
+                      <div class="campo">
+                        <label for="fecha-1">Fecha del pago</label>
+                        <input type="date" id="fecha-1" name="fecha" required />
+                      </div>
+                      <div class="acciones-form">
+                        <button type="submit" class="btn btn-primario">
+                          Sí, registrar
+                        </button>
+                        <button
+                          type="button"
+                          class="btn btn-secundario"
+                          popovertarget="pago-1"
+                          popovertargetaction="hide"
+                        >
+                          Volver
+                        </button>
+                      </div>
+                    </form>
+                  </div>
+                </td>
               </tr>
               <tr>
                 <td>Adán Toro<small>12.493.539-2</small></td>
                 <td><span class="estado-pago pendiente">Pendiente</span></td>
                 <td>—</td>
+                <td>
+                  <button
+                    type="button"
+                    class="btn btn-primario"
+                    popovertarget="pago-2"
+                  >
+                    Registrar pago
+                  </button>
+                  <div id="pago-2" class="confirmacion" popover>
+                    <form action="pagos-torneo.html" method="get">
+                      <p>¿Registrar el pago presencial de Adán Toro ($5.000)?</p>
+                      <div class="campo">
+                        <label for="fecha-2">Fecha del pago</label>
+                        <input type="date" id="fecha-2" name="fecha" required />
+                      </div>
+                      <div class="acciones-form">
+                        <button type="submit" class="btn btn-primario">
+                          Sí, registrar
+                        </button>
+                        <button
+                          type="button"
+                          class="btn btn-secundario"
+                          popovertarget="pago-2"
+                          popovertargetaction="hide"
+                        >
+                          Volver
+                        </button>
+                      </div>
+                    </form>
+                  </div>
+                </td>
               </tr>
               <tr>
                 <td>Diego Apolinario<small>24.283.834-K</small></td>
                 <td><span class="estado-pago pagado">Pagado</span></td>
                 <td>20-10-2026</td>
+                <td></td>
               </tr>
             </tbody>
           </table>

@@ -23,6 +23,18 @@
         Revisa el estado de pago de cada inscrito.
       </p>
       <section class="tarjeta">
+        <form class="consulta-pago" action="pagos-torneo.html" method="get">
+          <div class="campo">
+            <label for="buscar-rut">Consultar estado de un jugador</label>
+            <input
+              id="buscar-rut"
+              name="rut"
+              type="search"
+              placeholder="12.345.678-9"
+            />
+          </div>
+          <button class="btn btn-secundario" type="submit">Consultar</button>
+        </form>
         <h3>Inscritos</h3>
         <div class="tabla-wrap">
           <table>

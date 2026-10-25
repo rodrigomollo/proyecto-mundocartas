@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inscripción a Torneo - Mundo Cartas</title>
+    <link rel="stylesheet" href="../css/estilos.css">
+    <link rel="stylesheet" href="../css/inscripciones.css">
+</head>
+<body>
+
+   
+    <header class="header-principal">
+        <div class="header-contenido">
+            <h1 class="logo">Mundo Cartas</h1>
+            <nav class="navegacion">
+                <a href="#">Torneos</a>
+            </nav>
+        </div>
+    </header>
+
+   
+    <main class="contenedor-principal">
+        <div class="tarjeta-formulario">
+            <h2 class="titulo-formulario">Inscribirse a un torneo</h2>
+
+        
+            <form id="formInscripcion" class="formulario">
+                
+          
+                <div class="grupo-campo">
+                    <label for="torneoSeleccionado">Selecciona el torneo</label>
+                    <select id="torneoSeleccionado" required>
+                        <option value="" selected disabled>-- Selecciona un torneo disponible --</option>
+                        <option value="pokemon">Torneo Pokémon TCG Octubre — 25/10/2026 (18:00 hrs)</option>
+                        <option value="mitos">Torneo Mitos y Leyendas — 28/10/2026 (17:00 hrs)</option>
+                        <option value="magic">Torneo Magic: The Gathering — 02/11/2026 (16:00 hrs)</option>
+                    </select>
+                </div>
+
+            
+                <div class="info-cupos">
+                    <span class="label-cupos">Cupos disponibles:</span>
+                    <span class="badge-cupos badge-vacio">0 / 16 inscritos (16 cupos disponibles)</span>
+                </div>
+
+                
+                <div class="grupo-campo">
+                    <label for="nombreJugador">Nombre completo del jugador</label>
+                    <input type="text" id="nombreJugador" placeholder="Ej: Adán Toro" required>
+                </div>
+
+                <div class="grupo-campo">
+                    <label for="rutJugador">RUT / Identificador</label>
+                    <input type="text" id="rutJugador" placeholder="12.345.678-K" required>
+                </div>
+
+                
+                <div class="grupo-campo-doble">
+                    <div class="grupo-campo">
+                        <label for="edadJugador">Edad <span class="nota-opcional">(Opcional / Solo Pokémon)</span></label>
+                        <input type="number" id="edadJugador" min="5" max="99" placeholder="Ej: 19">
+                    </div>
+
+                    <div class="grupo-campo">
+                        <label for="categoriaJugador">Categoría de edad <span class="nota-opcional">(Solo Pokémon)</span></label>
+                        <select id="categoriaJugador">
+                            <option value="" selected disabled>Selecciona si juegas Pokémon</option>
+                            <option value="junior">Junior (Nacidos en 2013 o posterior)</option>
+                            <option value="senior">Senior (Nacidos entre 2009 y 2012)</option>
+                            <option value="master">Master (Nacidos en 2008 o anterior)</option>
+                        </select>
+                    </div>
+                </div>
+
+              
+                <div class="grupo-campo">
+                    <label for="nombreMazo">Nombre del mazo / Arquetipo</label>
+                    <input type="text" id="nombreMazo" placeholder="Ej: Charizard ex (Pokémon), Dragón/Luz (MyL), Red Deck Wins (Magic)" required>
+                </div>
+
+                <div class="acciones-formulario">
+                    <button type="submit" class="btn-guardar">Confirmar inscripción</button>
+                    <a href="#" class="btn-cancelar">Cancelar</a>
+                </div>
+            </form>
+        </div>
+    </main>
+
+</body>
+</html>

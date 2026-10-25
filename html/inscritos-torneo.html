@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lista de Inscritos - Mundo Cartas</title>
+    <link rel="stylesheet" href="../css/estilos.css">
+    <link rel="stylesheet" href="../css/inscripciones.css">
+</head>
+<body>
+
+    <!-- Header oscuro superior -->
+    <header class="header-principal">
+        <div class="header-contenido">
+            <h1 class="logo">Mundo Cartas</h1>
+            <nav class="navegacion">
+                <a href="inscripcion.html">Inscribirse</a>
+                <a href="mis-inscripciones.html">Mis Inscripciones</a>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Contenedor central -->
+    <main class="contenedor-principal">
+        <div class="tarjeta-ancho-completo">
+            <h2 class="titulo-formulario">Lista de jugadores inscritos</h2>
+
+            <!-- HU16: Selector de Torneo para filtrar participantes -->
+            <div class="grupo-campo mb-20">
+                <label for="filtroTorneo">Selecciona el torneo a consultar</label>
+                <select id="filtroTorneo">
+                    <option value="pokemon" selected>Torneo Pokémon TCG Octubre — 25/10/2026</option>
+                    <option value="mitos">Torneo Mitos y Leyendas — 28/10/2026</option>
+                    <option value="magic">Torneo Magic: MTG — 02/11/2026</option>
+                </select>
+            </div>
+
+            <!-- Resumen de Cupos del Torneo Consultado -->
+            <div class="info-cupos border-vacio">
+                <span class="label-cupos">Estado del torneo:</span>
+                <span class="badge-cupos badge-vacio">8 / 16 jugadores registrados</span>
+            </div>
+
+            <!-- Tabla de Jugadores Inscritos (HU16) -->
+            <div class="tabla-contenedor">
+                <table class="tabla-custom">
+                    <thead>
+                        <tr>
+                            <th>N°</th>
+                            <th>Jugador</th>
+                            <th>Categoría / Edad</th>
+                            <th>Mazo / Arquetipo</th>
+                            <th>Fecha de Inscripción</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><strong>#1</strong></td>
+                            <td>Rodrigo Mollo</td>
+                            <td>Master (20 años)</td>
+                            <td>Miraidon ex (Pokémon)</td>
+                            <td>14/10/2026</td>
+                        </tr>
+                        <tr>
+                            <td><strong>#2</strong></td>
+                            <td>Diego Apolinario</td>
+                            <td>Master (21 años)</td>
+                            <td>Charizard ex (Pokémon)</td>
+                            <td>14/10/2026</td>
+                        </tr>
+                        <tr>
+                            <td><strong>#3</strong></td>
+                            <td>Adán Toro</td>
+                            <td>Master (19 años)</td>
+                            <td>Gardevoir ex (Pokémon)</td>
+                            <td>15/10/2026</td>
+                        </tr>
+                        <tr>
+                            <td><strong>#4</strong></td>
+                            <td>Fernando Silva</td>
+                            <td>Senior (16 años)</td>
+                            <td>Palkia VSTAR (Pokémon)</td>
+                            <td>15/10/2026</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <!-- Acciones generales -->
+            <div class="acciones-formulario">
+                <a href="inscripcion.html" class="btn-guardar" style="text-decoration: none;">Inscribir nuevo jugador</a>
+            </div>
+
+        </div>
+    </main>
+
+</body>
+</html>

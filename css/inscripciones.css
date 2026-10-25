@@ -1,0 +1,231 @@
+
+:root {
+    --color-header: #2f4050;       
+    --color-fondo: #f4f5f7;         
+    --color-tarjeta: #ffffff;       
+    --color-texto: #1a1a1a;        
+    --color-borde: #dcdcdc;         
+    --color-btn-cancelar: #cccccc;  
+    --color-btn-cancelar-hover: #bbbbbb;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: var(--color-fondo);
+    color: var(--color-texto);
+}
+
+
+.header-principal {
+    background-color: var(--color-header);
+    height: 55px;
+    display: flex;
+    align-items: center;
+    padding: 0 40px;
+}
+
+.header-contenido {
+    width: 100%;
+    max-width: 1100px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    color: #ffffff;
+    font-size: 1.3rem;
+    font-weight: bold;
+    margin: 0;
+}
+
+.navegacion a {
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 0.9rem;
+    font-weight: bold;
+}
+
+
+.contenedor-principal {
+    display: flex;
+    justify-content: center;
+    padding: 40px 20px;
+}
+
+.tarjeta-formulario {
+    background-color: var(--color-tarjeta);
+    width: 100%;
+    max-width: 520px;
+    padding: 30px 40px;
+    border-radius: 8px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.08);
+}
+
+.titulo-formulario {
+    margin-top: 0;
+    margin-bottom: 22px;
+    font-size: 1.4rem;
+    font-weight: bold;
+    color: var(--color-texto);
+}
+
+
+.info-cupos {
+    background-color: #f8f9fa;
+    border-left: 4px solid var(--color-header);
+    border-top: 1px solid var(--color-borde);
+    border-right: 1px solid var(--color-borde);
+    border-bottom: 1px solid var(--color-borde);
+    border-radius: 4px;
+    padding: 12px 14px;
+    margin-bottom: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 0.9rem;
+}
+
+.badge-cupos {
+    padding: 4px 10px;
+    border-radius: 12px;
+    font-weight: bold;
+    font-size: 0.85rem;
+}
+
+
+.badge-vacio {
+    background-color: #e8f5e9;
+    color: #2e7d32;
+}
+
+.badge-medio {
+    background-color: #fff3e0;
+    color: #e65100;
+}
+
+.badge-lleno {
+    background-color: #ffebee;
+    color: #c62828;
+}
+
+
+.grupo-campo {
+    margin-bottom: 18px;
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+}
+
+.grupo-campo-doble {
+    display: flex;
+    gap: 15px;
+}
+
+.grupo-campo label {
+    font-size: 0.9rem;
+    font-weight: bold;
+    margin-bottom: 6px;
+    color: var(--color-texto);
+}
+
+.grupo-campo input,
+.grupo-campo select {
+    padding: 10px 12px;
+    border: 1px solid var(--color-borde);
+    border-radius: 4px;
+    font-size: 0.95rem;
+    background-color: #ffffff;
+    color: #333333;
+    outline: none;
+}
+
+.nota-opcional {
+    font-size: 0.75rem;
+    font-weight: normal;
+    color: #777777;
+}
+
+
+.acciones-formulario {
+    display: flex;
+    gap: 10px;
+    margin-top: 25px;
+}
+
+.btn-guardar {
+    background-color: var(--color-header);
+    color: #ffffff;
+    border: none;
+    padding: 10px 18px;
+    border-radius: 4px;
+    font-weight: bold;
+    font-size: 0.9rem;
+    cursor: pointer;
+}
+
+.btn-guardar:hover {
+    opacity: 0.9;
+}
+
+.btn-cancelar {
+    background-color: var(--color-btn-cancelar);
+    color: #333333;
+    text-decoration: none;
+    padding: 10px 18px;
+    border-radius: 4px;
+    font-weight: bold;
+    font-size: 0.9rem;
+    display: inline-block;
+    text-align: center;
+}
+
+.btn-cancelar:hover {
+    background-color: var(--color-btn-cancelar-hover);
+}
+
+.border-lleno {
+    border-left-color: #c62828 !important;
+    background-color: #ffebee !important;
+}
+
+.badge-lleno {
+    background-color: #ffcdd2;
+    color: #b71c1c;
+    padding: 4px 10px;
+    border-radius: 12px;
+    font-weight: bold;
+    font-size: 0.85rem;
+}
+
+.alerta-bloqueo {
+    background-color: #fbe9e7;
+    border: 1px solid #ffccbc;
+    color: #c62828;
+    padding: 12px 15px;
+    border-radius: 4px;
+    margin-bottom: 20px;
+    font-size: 0.88rem;
+    line-height: 1.4;
+}
+
+
+.btn-bloqueado {
+    background-color: #888888 !important;
+    cursor: not-allowed !important;
+    opacity: 0.7;
+}
+
+
+input:disabled, select:disabled {
+    background-color: #f2f2f2 !important;
+    color: #888888 !important;
+    cursor: not-allowed;
+}
+
+.mb-20 {
+    margin-bottom: 20px;
+}

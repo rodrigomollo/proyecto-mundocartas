@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inscripción Bloqueada - Mundo Cartas</title>
+    <link rel="stylesheet" href="../css/estilos.css">
+    <link rel="stylesheet" href="../css/inscripciones.css">
+</head>
+<body>
+
+    
+    <header class="header-principal">
+        <div class="header-contenido">
+            <h1 class="logo">Mundo Cartas</h1>
+            <nav class="navegacion">
+                <a href="inscripcion.html">Inscribirse</a>
+                <a href="mis-inscripciones.html">Mis Inscripciones</a>
+            </nav>
+        </div>
+    </header>
+
+
+    <main class="contenedor-principal">
+        <div class="tarjeta-formulario">
+            <h2 class="titulo-formulario">Inscribirse a un torneo</h2>
+
+         
+            <form id="formInscripcionLleno" class="formulario">
+                
+           
+                <div class="grupo-campo">
+                    <label for="torneoSeleccionado">Torneo seleccionado</label>
+                    <select id="torneoSeleccionado" disabled>
+                        <option value="pokemon" selected>Torneo Pokémon TCG Octubre — 25/10/2026 (18:00 hrs)</option>
+                    </select>
+                </div>
+
+               
+                <div class="info-cupos border-lleno">
+                    <span class="label-cupos">Estado de cupos:</span>
+                    <span class="badge-cupos badge-lleno">16 / 16 inscritos (COMPLETO)</span>
+                </div>
+
+             
+                <div class="alerta-bloqueo">
+                     <strong>Inscripciones cerradas:</strong> Este torneo ha alcanzado el límite máximo de participantes permitidos. No es posible registrar nuevos jugadores.
+                </div>
+
+                
+                <div class="grupo-campo">
+                    <label for="nombreJugador">Nombre completo del jugador</label>
+                    <input type="text" id="nombreJugador" placeholder="Ej: Adán Toro" disabled>
+                </div>
+
+                <div class="grupo-campo">
+                    <label for="rutJugador">RUT / Identificador</label>
+                    <input type="text" id="rutJugador" placeholder="12.345.678-K" disabled>
+                </div>
+
+             
+                <div class="grupo-campo-doble">
+                    <div class="grupo-campo">
+                        <label for="edadJugador">Edad <span class="nota-opcional">(Opcional / Solo Pokémon)</span></label>
+                        <input type="number" id="edadJugador" placeholder="Ej: 19" disabled>
+                    </div>
+
+                    <div class="grupo-campo">
+                        <label for="categoriaJugador">Categoría de edad <span class="nota-opcional">(Solo Pokémon)</span></label>
+                        <select id="categoriaJugador" disabled>
+                            <option value="" selected disabled>Selecciona si juegas Pokémon</option>
+                        </select>
+                    </div>
+                </div>
+
+            
+                <div class="grupo-campo">
+                    <label for="nombreMazo">Nombre del mazo / Arquetipo</label>
+                    <input type="text" id="nombreMazo" placeholder="Ej: Charizard ex (Pokémon)" disabled>
+                </div>
+
+              
+                <div class="acciones-formulario">
+                    <button type="button" class="btn-guardar btn-bloqueado" disabled>Torneo Completo</button>
+                    <a href="inscripcion.html" class="btn-cancelar">Volver</a>
+                </div>
+            </form>
+        </div>
+    </main>
+
+</body>
+</html>

@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Asignación Manual de Puntos – Mundo Cartas</title>
+  <link rel="stylesheet" href="../css/estilos.css" />
+  <link rel="stylesheet" href="../css/inscripciones.css" />
+</head>
+<body>
+  <header class="app-header">
+    <h1>Mundo Cartas</h1>
+    <nav>
+      <a href="asignar-puntos.html">Asignar Puntos</a>
+      <a href="historial-puntos.html">Historial</a>
+      <a href="ranking.html">Ranking</a>
+      <a href="recompensas.html">Mundo Puntos</a>
+      <a href="iniciar-sesion.html">Cerrar sesión</a>
+    </nav>
+  </header>
+
+  <main class="contenedor">
+    <h2>Asignación Manual de Puntos</h2>
+    <p class="margen-abajo">Otorga o ajusta puntos directamente a un participante.</p>
+
+    <form action="#" method="post">
+      <div class="campo">
+        <label for="torneo">Torneo</label>
+        <select id="torneo" name="torneo" required>
+          <option value="">-- Selecciona un torneo --</option>
+          <option value="1">Pokémon TCG - Premier League (25-10-2026)</option>
+          <option value="2">Magic The Gathering - Open (18-10-2026)</option>
+        </select>
+      </div>
+
+      <div class="campo">
+        <label for="jugador">Jugador</label>
+        <select id="jugador" name="jugador" required>
+          <option value="">-- Selecciona un jugador --</option>
+          <option value="101">Adán Toro (ID: 101)</option>
+          <option value="102">Fernando Silva (ID: 102)</option>
+        </select>
+      </div>
+
+      <div class="campo-grupo">
+        <div class="campo">
+          <label for="puntos">Puntos</label>
+          <input type="number" id="puntos" name="puntos" placeholder="Ej: 150" min="1" required />
+        </div>
+        <div class="campo">
+          <label for="motivo">Motivo</label>
+          <select id="motivo" name="motivo">
+            <option value="1lugar">1er Lugar (+100 pts)</option>
+            <option value="2lugar">2do Lugar (+70 pts)</option>
+            <option value="participacion">Participación (+20 pts)</option>
+            <option value="bonus">Bonus especial</option>
+          </select>
+        </div>
+      </div>
+
+      <div class="acciones-form">
+        <button type="submit" class="btn btn-primario">Asignar Puntos</button>
+        <a href="historial-puntos.html" class="btn btn-secundario">Ver Historial</a>
+      </div>
+    </form>
+  </main>
+</body>
+</html>

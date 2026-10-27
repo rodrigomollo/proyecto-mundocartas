@@ -14,6 +14,7 @@
       <a href="asignar-puntos.html">Asignar Puntos</a>
       <a href="historial-puntos.html">Historial</a>
       <a href="ranking.html">Ranking</a>
+      <a href="recompensas.html">Mundo Puntos</a>
       <a href="iniciar-sesion.html">Cerrar sesión</a>
     </nav>
   </header>
@@ -39,6 +40,27 @@
           <option value="101">Adán Toro (ID: 101)</option>
           <option value="102">Fernando Silva (ID: 102)</option>
         </select>
+      </div>
+
+      <div class="campo-grupo">
+        <div class="campo">
+          <label for="puntos">Puntos</label>
+          <input type="number" id="puntos" name="puntos" placeholder="Ej: 150" min="1" required />
+        </div>
+        <div class="campo">
+          <label for="motivo">Motivo</label>
+          <select id="motivo" name="motivo">
+            <option value="1lugar">1er Lugar (+100 pts)</option>
+            <option value="2lugar">2do Lugar (+70 pts)</option>
+            <option value="participacion">Participación (+20 pts)</option>
+            <option value="bonus">Bonus especial</option>
+          </select>
+        </div>
+      </div>
+
+      <div class="acciones-form">
+        <button type="submit" class="btn btn-primario">Asignar Puntos</button>
+        <a href="historial-puntos.html" class="btn btn-secundario">Ver Historial</a>
       </div>
     </form>
   </main>

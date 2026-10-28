@@ -1,0 +1,94 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Mi historial de torneos — Mundo Cartas</title>
+  <link rel="stylesheet" href="../css/estilos.css">
+  <link rel="stylesheet" href="../css/usuarios.css">
+  <link rel="stylesheet" href="../css/consultas.css">
+</head>
+<body>
+  <header class="app-header">
+    <h1>Mundo Cartas</h1>
+    <nav aria-label="Navegación principal">
+      <a href="calendario.html">Calendario</a>
+      <a href="historial-torneos.html" aria-current="page">Mi historial</a>
+      <a href="historial-puntos.html">Mis puntos</a>
+      <a href="iniciar-sesion.html">Cerrar sesión</a>
+    </nav>
+  </header>
+
+  <main class="pagina">
+    <p class="sobre-titulo">HU25 · Historial del jugador</p>
+    <div class="encabezado-pagina">
+      <div>
+        <h2>Mi historial de torneos</h2>
+        <p>Consulta los eventos en los que has participado y revisa tus resultados.</p>
+      </div>
+      <div class="resumen-numero">
+        <strong>3</strong><span>torneos registrados</span>
+      </div>
+    </div>
+
+    <section class="tarjeta">
+      <div class="barra-tabla">
+        <h3>Torneos jugados</h3>
+        <label class="buscador-historial" for="buscar-torneo">Buscar
+          <input id="buscar-torneo" type="search" placeholder="Nombre o juego">
+        </label>
+      </div>
+      <div class="tabla-wrap">
+        <table class="tabla-historial" id="tabla-historial">
+          <thead>
+            <tr>
+              <th>Fecha</th>
+              <th>Torneo</th>
+              <th>Juego</th>
+              <th>Resultado</th>
+              <th>Puntos</th>
+              <th>Detalle</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>25/10/2026</td>
+              <td>Premier League</td>
+              <td>Pokémon TCG</td>
+              <td><span class="resultado-puesto">1.er lugar</span></td>
+              <td>100 pts</td>
+              <td><a href="historial-puntos.html">Ver puntos</a></td>
+            </tr>
+            <tr>
+              <td>18/10/2026</td>
+              <td>Open</td>
+              <td>Magic: The Gathering</td>
+              <td>Participación</td>
+              <td>20 pts</td>
+              <td><a href="historial-puntos.html">Ver puntos</a></td>
+            </tr>
+            <tr>
+              <td>11/10/2026</td>
+              <td>Torneo semanal</td>
+              <td>Pokémon TCG</td>
+              <td>Top 8</td>
+              <td>40 pts</td>
+              <td><a href="historial-puntos.html">Ver puntos</a></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <p class="nota-prototipo">Los nombres y resultados son datos de demostración para el prototipo.</p>
+    </section>
+  </main>
+
+  <script>
+    const buscador = document.getElementById('buscar-torneo');
+    const filas = document.querySelectorAll('#tabla-historial tbody tr');
+    buscador.addEventListener('input', () => {
+      const termino = buscador.value.trim().toLocaleLowerCase('es');
+      filas.forEach(fila => fila.hidden = !fila.textContent.toLocaleLowerCase('es').includes(termino));
+    });
+  </script>
+</body>
+</html>

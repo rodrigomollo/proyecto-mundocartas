@@ -315,3 +315,22 @@
   background: #dfe3ee;
   margin: .35rem 0 .35rem 1.05rem;
 }
+
+@media (max-width: 900px) {
+  .rejilla-torneos { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .resumen-detalle { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+}
+
+@media (max-width: 640px) {
+  .encabezado-pagina { flex-direction: column; }
+  .filtros-calendario,
+  .filtro-jugador { flex-direction: column; align-items: stretch; }
+  .rejilla-torneos,
+  .resumen-jugador { grid-template-columns: 1fr; }
+  .resumen-detalle { grid-template-columns: 1fr 1fr; }
+  .barra-tabla { align-items: flex-start; flex-direction: column; }
+  .buscador-historial { align-items: flex-start; flex-direction: column; width: 100%; }
+  .buscador-historial input { width: 100%; }
+  .app-header { align-items: flex-start; flex-direction: column; gap: .8rem; }
+  .app-header nav { flex-wrap: wrap; gap: .75rem; }
+}

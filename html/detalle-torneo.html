@@ -1,0 +1,123 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Detalle del torneo — Mundo Cartas</title>
+  <link rel="stylesheet" href="../css/estilos.css">
+  <link rel="stylesheet" href="../css/usuarios.css">
+  <link rel="stylesheet" href="../css/consultas.css">
+</head>
+<body>
+  <header class="app-header">
+    <h1>Mundo Cartas</h1>
+    <nav aria-label="Navegación principal">
+      <a href="calendario.html">Calendario</a>
+      <a href="historial-torneos.html">Mi historial</a>
+      <a href="historial-puntos.html">Mis puntos</a>
+      <a href="iniciar-sesion.html">Iniciar sesión</a>
+    </nav>
+  </header>
+
+  <main class="pagina">
+    <p class="sobre-titulo">HU11 · Consulta de torneos</p>
+    <a href="calendario.html" class="enlace-volver">← Volver al calendario</a>
+
+    <section class="detalle-hero tarjeta">
+      <div class="torneo-card-cabecera">
+        <span class="juego-etiqueta mitos" id="detalle-juego-etiqueta">Mitos y Leyendas</span>
+        <span class="estado-torneo disponible" id="detalle-estado">Inscripciones abiertas</span>
+      </div>
+      <h2 id="detalle-nombre">Mitos y Leyendas — Imperio</h2>
+      <p class="texto-secundario" id="detalle-descripcion">Torneo semanal de formato Imperio.</p>
+
+      <div class="resumen-detalle">
+        <div><span>Fecha</span><strong id="detalle-fecha">28 de octubre de 2026</strong></div>
+        <div><span>Hora</span><strong id="detalle-hora">20:30</strong></div>
+        <div><span>Inscripción</span><strong id="detalle-valor">$3.000</strong></div>
+        <div><span>Cupos disponibles</span><strong id="detalle-cupos">8 de 16</strong></div>
+      </div>
+
+      <div class="acciones-form">
+        <a href="inscripcion.html" class="btn btn-primario">Inscribirme al torneo</a>
+        <a href="calendario.html" class="btn btn-secundario">Volver</a>
+      </div>
+    </section>
+
+    <section class="tarjeta seccion-detalle">
+      <h3>Reglas y detalles</h3>
+      <ul class="lista-detalles" id="detalle-reglas">
+        <li>Formato: Imperio.</li>
+        <li>Se solicita llegar 15 minutos antes del inicio.</li>
+        <li>Los participantes deben respetar las reglas oficiales del juego.</li>
+        <li>Los premios se informarán en el local antes de comenzar.</li>
+      </ul>
+    </section>
+
+    <section class="tarjeta seccion-detalle">
+      <h3>Información importante</h3>
+      <p>El valor y los cupos mostrados son datos de ejemplo. La inscripción se representa mediante una pantalla de prototipo y no procesa pagos reales.</p>
+    </section>
+  </main>
+
+  <script>
+    const torneos = {
+      'pokemon-oct-2026': {
+        juego: 'Pokémon TCG', clase: 'pokemon', nombre: 'Pokémon TCG — Premier League',
+        descripcion: 'Torneo de liga de Pokémon Trading Card Game.',
+        estado: 'Finalizado', estadoClase: 'finalizado', fecha: '25 de octubre de 2026',
+        hora: '20:30', valor: '$5.000', cupos: '0 de 16', reglas: [
+          'Formato: torneo de liga oficial.',
+          'Los jugadores deben presentar su identificador de jugador.',
+          'Los resultados se registran al finalizar las rondas.',
+          'Los puntos mostrados en el historial son de demostración.'
+        ]
+      },
+      'mitos-oct-2026': {
+        juego: 'Mitos y Leyendas', clase: 'mitos', nombre: 'Mitos y Leyendas — Imperio',
+        descripcion: 'Torneo semanal de formato Imperio.',
+        estado: 'Inscripciones abiertas', estadoClase: 'disponible', fecha: '28 de octubre de 2026',
+        hora: '20:30', valor: '$3.000', cupos: '8 de 16', reglas: [
+          'Formato: Imperio.',
+          'Se solicita llegar 15 minutos antes del inicio.',
+          'Los participantes deben respetar las reglas oficiales del juego.',
+          'Los premios se informarán en el local antes de comenzar.'
+        ]
+      },
+      'magic-nov-2026': {
+        juego: 'Magic: The Gathering', clase: 'magic', nombre: 'Magic: The Gathering — Open',
+        descripcion: 'Torneo abierto de Magic: The Gathering.',
+        estado: 'Inscripciones abiertas', estadoClase: 'disponible', fecha: '2 de noviembre de 2026',
+        hora: '19:00', valor: '$4.000', cupos: '12 de 24', reglas: [
+          'Formato: Modern.',
+          'Cada participante debe traer su mazo legal para el formato.',
+          'Las rondas y resultados serán informados por la organización.',
+          'Se solicita puntualidad para facilitar el inicio del torneo.'
+        ]
+      }
+    };
+    const id = new URLSearchParams(window.location.search).get('id') || 'mitos-oct-2026';
+    const torneo = torneos[id] || torneos['mitos-oct-2026'];
+    document.title = torneo.nombre + ' — Mundo Cartas';
+    document.getElementById('detalle-juego-etiqueta').textContent = torneo.juego;
+    document.getElementById('detalle-juego-etiqueta').className = 'juego-etiqueta ' + torneo.clase;
+    document.getElementById('detalle-estado').textContent = torneo.estado;
+    document.getElementById('detalle-estado').className = 'estado-torneo ' + torneo.estadoClase;
+    document.getElementById('detalle-nombre').textContent = torneo.nombre;
+    document.getElementById('detalle-descripcion').textContent = torneo.descripcion;
+    document.getElementById('detalle-fecha').textContent = torneo.fecha;
+    document.getElementById('detalle-hora').textContent = torneo.hora;
+    document.getElementById('detalle-valor').textContent = torneo.valor;
+    document.getElementById('detalle-cupos').textContent = torneo.cupos;
+    document.getElementById('detalle-reglas').replaceChildren(...torneo.reglas.map(regla => {
+      const li = document.createElement('li'); li.textContent = regla; return li;
+    }));
+    if (torneo.estadoClase === 'finalizado') {
+      document.querySelector('.detalle-hero .btn-primario').textContent = 'Torneo finalizado';
+      document.querySelector('.detalle-hero .btn-primario').removeAttribute('href');
+      document.querySelector('.detalle-hero .btn-primario').classList.add('btn-deshabilitado');
+      document.querySelector('.detalle-hero .btn-primario').setAttribute('aria-disabled', 'true');
+    }
+  </script>
+</body>
+</html>

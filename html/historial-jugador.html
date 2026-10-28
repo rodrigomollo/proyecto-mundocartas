@@ -1,0 +1,113 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Historial de jugador — Administración Mundo Cartas</title>
+  <link rel="stylesheet" href="../css/estilos.css">
+  <link rel="stylesheet" href="../css/usuarios.css">
+  <link rel="stylesheet" href="../css/consultas.css">
+</head>
+<body>
+  <header class="app-header">
+    <h1>Mundo Cartas</h1>
+    <nav aria-label="Navegación administrativa">
+      <a href="torneos-admin.html">Torneos</a>
+      <a href="jugadores.html">Jugadores</a>
+      <a href="historial-jugador.html" aria-current="page">Historial de jugador</a>
+      <a href="iniciar-sesion.html">Cerrar sesión</a>
+    </nav>
+  </header>
+
+  <main class="pagina">
+    <p class="sobre-titulo">HU27 · Consulta administrativa</p>
+    <h2>Historial de un jugador</h2>
+    <p>Selecciona un jugador para consultar su participación, resultados y puntos registrados.</p>
+
+    <section class="tarjeta filtro-jugador">
+      <div class="campo">
+        <label for="jugador">Jugador</label>
+        <select id="jugador">
+          <option value="camila">Camila Rojas</option>
+          <option value="martin">Martín Fuentes</option>
+          <option value="valentina">Valentina Soto</option>
+        </select>
+      </div>
+      <button class="btn btn-primario" id="consultar" type="button">Consultar historial</button>
+    </section>
+
+    <section class="resumen-jugador">
+      <article class="tarjeta dato-jugador">
+        <span>Jugador consultado</span>
+        <strong id="nombre-jugador">Camila Rojas</strong>
+        <small>Perfil de demostración</small>
+      </article>
+      <article class="tarjeta dato-jugador">
+        <span>Torneos registrados</span>
+        <strong id="cantidad-torneos">3</strong>
+      </article>
+      <article class="tarjeta dato-jugador">
+        <span>Puntos acumulados</span>
+        <strong id="total-puntos">160 pts</strong>
+      </article>
+    </section>
+
+    <section class="tarjeta">
+      <h3>Participaciones registradas</h3>
+      <div class="tabla-wrap">
+        <table>
+          <thead>
+            <tr><th>Fecha</th><th>Torneo</th><th>Asistencia</th><th>Resultado</th><th>Puntos</th></tr>
+          </thead>
+          <tbody id="filas-historial">
+            <tr><td>25/10/2026</td><td>Pokémon TCG — Premier League</td><td><span class="estado-torneo disponible">Asistió</span></td><td>1.er lugar</td><td>100</td></tr>
+            <tr><td>18/10/2026</td><td>Magic: The Gathering — Open</td><td><span class="estado-torneo disponible">Asistió</span></td><td>Participación</td><td>20</td></tr>
+            <tr><td>11/10/2026</td><td>Pokémon TCG — Torneo semanal</td><td><span class="estado-torneo disponible">Asistió</span></td><td>Top 8</td><td>40</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <p class="nota-prototipo">Esta vista simula la consulta administrativa. Los datos no provienen de una base de datos.</p>
+    </section>
+  </main>
+
+  <script>
+    const perfiles = {
+      camila: {nombre:'Camila Rojas', total:'160 pts', filas:[
+        ['25/10/2026','Pokémon TCG — Premier League','Asistió','1.er lugar','100'],
+        ['18/10/2026','Magic: The Gathering — Open','Asistió','Participación','20'],
+        ['11/10/2026','Pokémon TCG — Torneo semanal','Asistió','Top 8','40']
+      ]},
+      martin: {nombre:'Martín Fuentes', total:'90 pts', filas:[
+        ['25/10/2026','Pokémon TCG — Premier League','Asistió','Top 8','40'],
+        ['18/10/2026','Magic: The Gathering — Open','Asistió','2.º lugar','50']
+      ]},
+      valentina: {nombre:'Valentina Soto', total:'20 pts', filas:[
+        ['18/10/2026','Magic: The Gathering — Open','Asistió','Participación','20']
+      ]}
+    };
+    document.getElementById('consultar').addEventListener('click', () => {
+      const perfil = perfiles[document.getElementById('jugador').value];
+      document.getElementById('nombre-jugador').textContent = perfil.nombre;
+      document.getElementById('cantidad-torneos').textContent = perfil.filas.length;
+      document.getElementById('total-puntos').textContent = perfil.total;
+      const cuerpo = document.getElementById('filas-historial');
+      cuerpo.replaceChildren(...perfil.filas.map(datos => {
+        const fila = document.createElement('tr');
+        datos.forEach((dato, indice) => {
+          const celda = document.createElement('td');
+          if (indice === 2) {
+            const estado = document.createElement('span');
+            estado.className = 'estado-torneo disponible';
+            estado.textContent = dato;
+            celda.appendChild(estado);
+          } else {
+            celda.textContent = dato;
+          }
+          fila.appendChild(celda);
+        });
+        return fila;
+      }));
+    });
+  </script>
+</body>
+</html>

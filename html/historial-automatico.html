@@ -1,0 +1,69 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Registro automático del historial — Mundo Cartas</title>
+  <link rel="stylesheet" href="../css/estilos.css">
+  <link rel="stylesheet" href="../css/usuarios.css">
+  <link rel="stylesheet" href="../css/consultas.css">
+</head>
+<body>
+  <header class="app-header">
+    <h1>Mundo Cartas</h1>
+    <nav aria-label="Navegación administrativa">
+      <a href="torneos-admin.html">Torneos</a>
+      <a href="resultados-torneo.html">Resultados</a>
+      <a href="historial-jugador.html">Historial de jugador</a>
+      <a href="iniciar-sesion.html">Cerrar sesión</a>
+    </nav>
+  </header>
+
+  <main class="pagina">
+    <p class="sobre-titulo">HU28 · Registro automático</p>
+    <h2>Registro automático del historial</h2>
+    <p>Al registrar los resultados de un torneo, el sistema genera una entrada de historial con la fecha, el torneo, el jugador y el resultado.</p>
+
+    <section class="tarjeta flujo-automatico">
+      <div class="paso-automatico">
+        <span class="numero-paso">1</span>
+        <div><h3>Registrar resultados</h3><p>El administrador completa las posiciones al finalizar el torneo.</p></div>
+      </div>
+      <div class="conector-pasos" aria-hidden="true"></div>
+      <div class="paso-automatico">
+        <span class="numero-paso">2</span>
+        <div><h3>Generar historial</h3><p>Se prepara un registro por participante con fecha, nombre del evento y resultado.</p></div>
+      </div>
+      <div class="conector-pasos" aria-hidden="true"></div>
+      <div class="paso-automatico">
+        <span class="numero-paso">3</span>
+        <div><h3>Consultar historial</h3><p>El jugador y el administrador pueden revisar las participaciones registradas.</p></div>
+      </div>
+      <div class="acciones-form">
+        <a href="resultados-torneo.html" class="btn btn-primario">Ir a resultados del torneo</a>
+        <a href="historial-jugador.html" class="btn btn-secundario">Consultar historial</a>
+      </div>
+    </section>
+
+    <section class="tarjeta seccion-detalle">
+      <div class="barra-tabla">
+        <h3>Vista previa de registros</h3>
+        <span class="estado-torneo disponible">Ejemplo de registro generado</span>
+      </div>
+      <div class="tabla-wrap">
+        <table>
+          <thead>
+            <tr><th>Fecha de registro</th><th>Jugador</th><th>Torneo</th><th>Resultado</th><th>Estado</th></tr>
+          </thead>
+          <tbody>
+            <tr><td>25/10/2026</td><td>Camila Rojas</td><td>Pokémon TCG — Premier League</td><td>1.er lugar</td><td>Registrado</td></tr>
+            <tr><td>25/10/2026</td><td>Martín Fuentes</td><td>Pokémon TCG — Premier League</td><td>Top 8</td><td>Registrado</td></tr>
+            <tr><td>18/10/2026</td><td>Valentina Soto</td><td>Magic: The Gathering — Open</td><td>Participación</td><td>Registrado</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <p class="nota-prototipo">Esta pantalla representa el comportamiento esperado. No registra datos automáticamente ni guarda información real.</p>
+    </section>
+  </main>
+</body>
+</html>

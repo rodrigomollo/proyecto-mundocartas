@@ -1,0 +1,336 @@
+.pagina {
+  max-width: 1120px;
+}
+
+.sobre-titulo {
+  color: #6c4de6;
+  font-size: .78rem;
+  font-weight: 700;
+  letter-spacing: .08em;
+  text-transform: uppercase;
+  margin-bottom: .45rem;
+}
+
+.encabezado-pagina {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 1rem;
+  margin-bottom: 1.4rem;
+}
+
+.encabezado-pagina h2,
+.pagina > h2 {
+  margin-bottom: .45rem;
+}
+
+.encabezado-pagina p,
+.pagina > p {
+  color: #626a82;
+}
+
+.texto-secundario {
+  color: #626a82;
+  font-size: .92rem;
+  margin: .4rem 0 1rem;
+}
+
+.tarjeta {
+  margin-bottom: 1.25rem;
+}
+
+.filtros-calendario {
+  display: flex;
+  align-items: flex-end;
+  gap: 1rem;
+  margin-bottom: 1.4rem;
+}
+
+.filtros-calendario .campo {
+  flex: 1;
+  margin-bottom: 0;
+}
+
+.rejilla-torneos {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 1.2rem;
+}
+
+.torneo-card {
+  display: flex;
+  flex-direction: column;
+  padding: 1.25rem;
+  border: 1px solid #dfe3ee;
+  border-radius: 12px;
+  background: #fff;
+  box-shadow: 0 2px 8px rgba(32, 36, 58, .06);
+}
+
+.torneo-card[hidden] {
+  display: none;
+}
+
+.torneo-card-cabecera,
+.barra-tabla {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: .75rem;
+  flex-wrap: wrap;
+}
+
+.juego-etiqueta,
+.estado-torneo {
+  display: inline-block;
+  width: fit-content;
+  border-radius: 99px;
+  padding: .3rem .65rem;
+  font-size: .76rem;
+  font-weight: 700;
+}
+
+.juego-etiqueta.pokemon { background: #fff0d1; color: #815100; }
+.juego-etiqueta.mitos { background: #e8e3ff; color: #4c3299; }
+.juego-etiqueta.magic { background: #dceafe; color: #214f91; }
+
+.estado-torneo.disponible { background: #dff5e8; color: #17633c; }
+.estado-torneo.finalizado { background: #e8ebf0; color: #4e5868; }
+.estado-torneo.proximo { background: #fff0d1; color: #815100; }
+.estado-info { background: #e8e3ff; color: #4c3299; white-space: nowrap; }
+
+.fecha-torneo {
+  display: flex;
+  align-items: center;
+  gap: .65rem;
+  margin: 1.25rem 0 .8rem;
+  color: #2c3e50;
+}
+
+.fecha-torneo strong {
+  font-size: 2.3rem;
+  line-height: 1;
+}
+
+.fecha-torneo span {
+  font-size: .75rem;
+  line-height: 1.3;
+  font-weight: 700;
+}
+
+.torneo-card h3 {
+  font-size: 1.12rem;
+  line-height: 1.35;
+  margin-bottom: .25rem;
+}
+
+.datos-torneo {
+  list-style: none;
+  display: grid;
+  gap: .55rem;
+  padding: 1rem 0;
+  margin: auto 0 .5rem;
+  color: #42495c;
+  font-size: .9rem;
+}
+
+.boton-ancho {
+  display: block;
+  width: 100%;
+  margin-top: .5rem;
+}
+
+.nota-prototipo {
+  margin: 1rem 0 0;
+  color: #626a82;
+  font-size: .82rem;
+}
+
+.detalle-hero h2 {
+  margin: 1rem 0 .4rem;
+}
+
+.resumen-detalle {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: .8rem;
+  margin: 1.5rem 0;
+}
+
+.resumen-detalle > div {
+  padding: 1rem;
+  background: #f4f6fb;
+  border-radius: 8px;
+}
+
+.resumen-detalle span,
+.dato-jugador > span {
+  display: block;
+  color: #626a82;
+  font-size: .82rem;
+  margin-bottom: .4rem;
+}
+
+.resumen-detalle strong {
+  color: #20243a;
+}
+
+.enlace-volver {
+  display: inline-block;
+  margin-bottom: 1rem;
+  color: #2c3e50;
+  font-weight: 700;
+  text-decoration: none;
+}
+
+.enlace-volver:hover { text-decoration: underline; }
+
+.seccion-detalle h3,
+.tarjeta > h3 {
+  margin-bottom: 1rem;
+}
+
+.lista-detalles {
+  padding-left: 1.25rem;
+  line-height: 1.8;
+  color: #42495c;
+}
+
+.btn-deshabilitado {
+  background: #a8afba !important;
+  color: #fff !important;
+  cursor: not-allowed !important;
+  pointer-events: none;
+}
+
+.resumen-numero {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-width: 130px;
+  padding: .8rem 1.1rem;
+  border-radius: 10px;
+  background: #e8e3ff;
+  color: #4c3299;
+}
+
+.resumen-numero strong { font-size: 1.7rem; }
+.resumen-numero span { font-size: .78rem; text-align: center; }
+
+.barra-tabla {
+  margin-bottom: 1rem;
+}
+
+.barra-tabla h3 { margin: 0; }
+
+.buscador-historial {
+  display: flex;
+  align-items: center;
+  gap: .5rem;
+  font-size: .88rem;
+  font-weight: 700;
+}
+
+.buscador-historial input {
+  padding: .55rem .7rem;
+  border: 1px solid #dfe3ee;
+  border-radius: 6px;
+  font: inherit;
+}
+
+.tabla-historial a {
+  color: #4c3299;
+  font-weight: 700;
+}
+
+.resultado-puesto {
+  display: inline-block;
+  background: #fff0d1;
+  color: #815100;
+  padding: .25rem .5rem;
+  border-radius: 99px;
+  font-size: .8rem;
+  font-weight: 700;
+}
+
+.filtro-jugador {
+  display: flex;
+  align-items: flex-end;
+  gap: 1rem;
+}
+
+.filtro-jugador .campo {
+  flex: 1;
+  margin-bottom: 0;
+}
+
+.resumen-jugador {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 1rem;
+  margin-bottom: 1.25rem;
+}
+
+.dato-jugador { margin-bottom: 0; }
+.dato-jugador strong {
+  display: block;
+  font-size: 1.35rem;
+  margin: .2rem 0;
+}
+
+.flujo-automatico {
+  padding: 1.5rem;
+}
+
+.paso-automatico {
+  display: flex;
+  align-items: flex-start;
+  gap: 1rem;
+}
+
+.numero-paso {
+  display: grid;
+  place-items: center;
+  flex: 0 0 2.2rem;
+  height: 2.2rem;
+  border-radius: 50%;
+  background: #e8e3ff;
+  color: #4c3299;
+  font-weight: 700;
+}
+
+.paso-automatico h3 {
+  margin: .1rem 0 .35rem;
+}
+
+.paso-automatico p {
+  color: #626a82;
+  line-height: 1.5;
+}
+
+.conector-pasos {
+  width: 2px;
+  height: 1.4rem;
+  background: #dfe3ee;
+  margin: .35rem 0 .35rem 1.05rem;
+}
+
+@media (max-width: 900px) {
+  .rejilla-torneos { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .resumen-detalle { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+}
+
+@media (max-width: 640px) {
+  .encabezado-pagina { flex-direction: column; }
+  .filtros-calendario,
+  .filtro-jugador { flex-direction: column; align-items: stretch; }
+  .rejilla-torneos,
+  .resumen-jugador { grid-template-columns: 1fr; }
+  .resumen-detalle { grid-template-columns: 1fr 1fr; }
+  .barra-tabla { align-items: flex-start; flex-direction: column; }
+  .buscador-historial { align-items: flex-start; flex-direction: column; width: 100%; }
+  .buscador-historial input { width: 100%; }
+  .app-header { align-items: flex-start; flex-direction: column; gap: .8rem; }
+  .app-header nav { flex-wrap: wrap; gap: .75rem; }
+}

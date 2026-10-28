@@ -1,0 +1,147 @@
+.pagina {
+  max-width: 1120px;
+}
+
+.sobre-titulo {
+  color: #6c4de6;
+  font-size: .78rem;
+  font-weight: 700;
+  letter-spacing: .08em;
+  text-transform: uppercase;
+  margin-bottom: .45rem;
+}
+
+.encabezado-pagina {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 1rem;
+  margin-bottom: 1.4rem;
+}
+
+.encabezado-pagina h2,
+.pagina > h2 {
+  margin-bottom: .45rem;
+}
+
+.encabezado-pagina p,
+.pagina > p {
+  color: #626a82;
+}
+
+.texto-secundario {
+  color: #626a82;
+  font-size: .92rem;
+  margin: .4rem 0 1rem;
+}
+
+.tarjeta {
+  margin-bottom: 1.25rem;
+}
+
+.filtros-calendario {
+  display: flex;
+  align-items: flex-end;
+  gap: 1rem;
+  margin-bottom: 1.4rem;
+}
+
+.filtros-calendario .campo {
+  flex: 1;
+  margin-bottom: 0;
+}
+
+.rejilla-torneos {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 1.2rem;
+}
+
+.torneo-card {
+  display: flex;
+  flex-direction: column;
+  padding: 1.25rem;
+  border: 1px solid #dfe3ee;
+  border-radius: 12px;
+  background: #fff;
+  box-shadow: 0 2px 8px rgba(32, 36, 58, .06);
+}
+
+.torneo-card[hidden] {
+  display: none;
+}
+
+.torneo-card-cabecera,
+.barra-tabla {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: .75rem;
+  flex-wrap: wrap;
+}
+
+.juego-etiqueta,
+.estado-torneo {
+  display: inline-block;
+  width: fit-content;
+  border-radius: 99px;
+  padding: .3rem .65rem;
+  font-size: .76rem;
+  font-weight: 700;
+}
+
+.juego-etiqueta.pokemon { background: #fff0d1; color: #815100; }
+.juego-etiqueta.mitos { background: #e8e3ff; color: #4c3299; }
+.juego-etiqueta.magic { background: #dceafe; color: #214f91; }
+
+.estado-torneo.disponible { background: #dff5e8; color: #17633c; }
+.estado-torneo.finalizado { background: #e8ebf0; color: #4e5868; }
+.estado-torneo.proximo { background: #fff0d1; color: #815100; }
+.estado-info { background: #e8e3ff; color: #4c3299; white-space: nowrap; }
+
+.fecha-torneo {
+  display: flex;
+  align-items: center;
+  gap: .65rem;
+  margin: 1.25rem 0 .8rem;
+  color: #2c3e50;
+}
+
+.fecha-torneo strong {
+  font-size: 2.3rem;
+  line-height: 1;
+}
+
+.fecha-torneo span {
+  font-size: .75rem;
+  line-height: 1.3;
+  font-weight: 700;
+}
+
+.torneo-card h3 {
+  font-size: 1.12rem;
+  line-height: 1.35;
+  margin-bottom: .25rem;
+}
+
+.datos-torneo {
+  list-style: none;
+  display: grid;
+  gap: .55rem;
+  padding: 1rem 0;
+  margin: auto 0 .5rem;
+  color: #42495c;
+  font-size: .9rem;
+}
+
+.boton-ancho {
+  display: block;
+  width: 100%;
+  margin-top: .5rem;
+}
+
+.nota-prototipo {
+  margin: 1rem 0 0;
+  color: #626a82;
+  font-size: .82rem;
+}

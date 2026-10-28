@@ -254,3 +254,27 @@
   font-weight: 700;
 }
 
+.filtro-jugador {
+  display: flex;
+  align-items: flex-end;
+  gap: 1rem;
+}
+
+.filtro-jugador .campo {
+  flex: 1;
+  margin-bottom: 0;
+}
+
+.resumen-jugador {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 1rem;
+  margin-bottom: 1.25rem;
+}
+
+.dato-jugador { margin-bottom: 0; }
+.dato-jugador strong {
+  display: block;
+  font-size: 1.35rem;
+  margin: .2rem 0;
+}

@@ -1,0 +1,120 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Calendario de torneos — Mundo Cartas</title>
+  <link rel="stylesheet" href="../css/estilos.css">
+  <link rel="stylesheet" href="../css/usuarios.css">
+  <link rel="stylesheet" href="../css/consultas.css">
+</head>
+<body>
+  <header class="app-header">
+    <h1>Mundo Cartas</h1>
+    <nav aria-label="Navegación principal">
+      <a href="calendario.html" aria-current="page">Calendario</a>
+      <a href="historial-torneos.html">Mi historial</a>
+      <a href="historial-puntos.html">Mis puntos</a>
+      <a href="iniciar-sesion.html">Iniciar sesión</a>
+    </nav>
+  </header>
+
+  <main class="pagina">
+    <div class="encabezado-pagina">
+      <div>
+        <p class="sobre-titulo">HU10 · Consulta de torneos</p>
+        <h2>Calendario de torneos</h2>
+        <p>Revisa las próximas fechas y encuentra tu siguiente torneo.</p>
+      </div>
+      <span class="etiqueta estado-info">Temporada octubre–noviembre 2026</span>
+    </div>
+
+    <section class="filtros-calendario tarjeta" aria-label="Filtros de calendario">
+      <div class="campo">
+        <label for="filtro-juego">Juego</label>
+        <select id="filtro-juego" name="juego">
+          <option value="todos">Todos los juegos</option>
+          <option value="pokemon">Pokémon TCG</option>
+          <option value="mitos">Mitos y Leyendas</option>
+          <option value="magic">Magic: The Gathering</option>
+        </select>
+      </div>
+      <div class="campo">
+        <label for="filtro-mes">Mes</label>
+        <select id="filtro-mes" name="mes">
+          <option value="todos">Todos los meses</option>
+          <option value="octubre">Octubre 2026</option>
+          <option value="noviembre">Noviembre 2026</option>
+        </select>
+      </div>
+      <button class="btn btn-secundario" type="button" onclick="document.getElementById('filtro-juego').value='todos';document.getElementById('filtro-mes').value='todos';">Limpiar filtros</button>
+    </section>
+
+    <section class="rejilla-torneos" aria-label="Torneos disponibles">
+      <article class="torneo-card" data-juego="pokemon" data-mes="octubre">
+        <div class="torneo-card-cabecera">
+          <span class="juego-etiqueta pokemon">Pokémon TCG</span>
+          <span class="estado-torneo finalizado">Finalizado</span>
+        </div>
+        <div class="fecha-torneo"><strong>25</strong><span>OCT<br>2026</span></div>
+        <h3>Pokémon TCG — Premier League</h3>
+        <p class="texto-secundario">Torneo de liga · Formato oficial</p>
+        <ul class="datos-torneo">
+          <li><strong>Hora:</strong> 20:30</li>
+          <li><strong>Inscripción:</strong> $5.000</li>
+          <li><strong>Cupos:</strong> 16 participantes</li>
+        </ul>
+        <a class="btn btn-secundario boton-ancho" href="detalle-torneo.html?id=pokemon-oct-2026">Ver detalles</a>
+      </article>
+
+      <article class="torneo-card" data-juego="mitos" data-mes="octubre">
+        <div class="torneo-card-cabecera">
+          <span class="juego-etiqueta mitos">Mitos y Leyendas</span>
+          <span class="estado-torneo disponible">Inscripciones abiertas</span>
+        </div>
+        <div class="fecha-torneo"><strong>28</strong><span>OCT<br>2026</span></div>
+        <h3>Mitos y Leyendas — Imperio</h3>
+        <p class="texto-secundario">Torneo semanal · Formato Imperio</p>
+        <ul class="datos-torneo">
+          <li><strong>Hora:</strong> 20:30</li>
+          <li><strong>Inscripción:</strong> $3.000</li>
+          <li><strong>Cupos:</strong> 8 de 16 disponibles</li>
+        </ul>
+        <a class="btn btn-primario boton-ancho" href="detalle-torneo.html?id=mitos-oct-2026">Ver detalles</a>
+      </article>
+
+      <article class="torneo-card" data-juego="magic" data-mes="noviembre">
+        <div class="torneo-card-cabecera">
+          <span class="juego-etiqueta magic">Magic: The Gathering</span>
+          <span class="estado-torneo disponible">Inscripciones abiertas</span>
+        </div>
+        <div class="fecha-torneo"><strong>02</strong><span>NOV<br>2026</span></div>
+        <h3>Magic: The Gathering — Open</h3>
+        <p class="texto-secundario">Torneo abierto · Formato Modern</p>
+        <ul class="datos-torneo">
+          <li><strong>Hora:</strong> 19:00</li>
+          <li><strong>Inscripción:</strong> $4.000</li>
+          <li><strong>Cupos:</strong> 12 de 24 disponibles</li>
+        </ul>
+        <a class="btn btn-primario boton-ancho" href="detalle-torneo.html?id=magic-nov-2026">Ver detalles</a>
+      </article>
+    </section>
+    <p class="nota-prototipo">Prototipo visual: los filtros y los cupos son demostrativos y no consultan una base de datos.</p>
+  </main>
+
+  <script>
+    const filtroJuego = document.getElementById('filtro-juego');
+    const filtroMes = document.getElementById('filtro-mes');
+    const tarjetas = document.querySelectorAll('.torneo-card');
+    function filtrarTorneos() {
+      tarjetas.forEach(tarjeta => {
+        const coincideJuego = filtroJuego.value === 'todos' || tarjeta.dataset.juego === filtroJuego.value;
+        const coincideMes = filtroMes.value === 'todos' || tarjeta.dataset.mes === filtroMes.value;
+        tarjeta.hidden = !(coincideJuego && coincideMes);
+      });
+    }
+    filtroJuego.addEventListener('change', filtrarTorneos);
+    filtroMes.addEventListener('change', filtrarTorneos);
+  </script>
+</body>
+</html>

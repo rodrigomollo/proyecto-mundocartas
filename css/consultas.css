@@ -278,3 +278,40 @@
   font-size: 1.35rem;
   margin: .2rem 0;
 }
+
+.flujo-automatico {
+  padding: 1.5rem;
+}
+
+.paso-automatico {
+  display: flex;
+  align-items: flex-start;
+  gap: 1rem;
+}
+
+.numero-paso {
+  display: grid;
+  place-items: center;
+  flex: 0 0 2.2rem;
+  height: 2.2rem;
+  border-radius: 50%;
+  background: #e8e3ff;
+  color: #4c3299;
+  font-weight: 700;
+}
+
+.paso-automatico h3 {
+  margin: .1rem 0 .35rem;
+}
+
+.paso-automatico p {
+  color: #626a82;
+  line-height: 1.5;
+}
+
+.conector-pasos {
+  width: 2px;
+  height: 1.4rem;
+  background: #dfe3ee;
+  margin: .35rem 0 .35rem 1.05rem;
+}
